@@ -22,6 +22,8 @@
 		4861903C294C9A4300CF1C94 /* SongCellModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861903B294C9A4300CF1C94 /* SongCellModelFactory.swift */; };
 		4887AD9A2946530A00816246 /* AppDetailWhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887AD992946530A00816246 /* AppDetailWhatsNewViewController.swift */; };
 		4887AD9C2946535600816246 /* AppDetailWhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887AD9B2946535600816246 /* AppDetailWhatsNewView.swift */; };
+		48BAEB5C295F2FCC002B5666 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BAEB5B295F2FCC002B5666 /* SearchRouter.swift */; };
+		48BAEB5E295F3202002B5666 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BAEB5D295F3202002B5666 /* SearchInteractor.swift */; };
 		48D2C99529463DD300BDB053 /* AppDetailHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D2C99429463DD300BDB053 /* AppDetailHeaderViewController.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
@@ -60,6 +62,8 @@
 		4861903B294C9A4300CF1C94 /* SongCellModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellModelFactory.swift; sourceTree = "<group>"; };
 		4887AD992946530A00816246 /* AppDetailWhatsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewViewController.swift; sourceTree = "<group>"; };
 		4887AD9B2946535600816246 /* AppDetailWhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewView.swift; sourceTree = "<group>"; };
+		48BAEB5B295F2FCC002B5666 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		48BAEB5D295F3202002B5666 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		48D2C99429463DD300BDB053 /* AppDetailHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderViewController.swift; sourceTree = "<group>"; };
 		8BE349225151AE13B1EDE333 /* Pods-iOSArchitecturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEA6AF9F424A0D5873D2723 /* Pods_iOSArchitecturesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArchitecturesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,23 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		48BAEB59295F2ED6002B5666 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				48BAEB5B295F2FCC002B5666 /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		48BAEB5A295F2EDD002B5666 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				48BAEB5D295F3202002B5666 /* SearchInteractor.swift */,
+				4861903A294C90C200CF1C94 /* Factory */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		DB95456C2F2DCD400ABCE8E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,11 +262,12 @@
 		E0E1D2A62034A36C0011E01A /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				481A0CB42959ABB80020F195 /* Builder */,
-				4861903A294C90C200CF1C94 /* Factory */,
 				F8A97B3622498F0C00FB2C0E /* View */,
 				F8114FBF22A3E5D500102830 /* Controller */,
 				481A0CB129598D930020F195 /* Presenter */,
+				48BAEB5A295F2EDD002B5666 /* Interactor */,
+				48BAEB59295F2ED6002B5666 /* Router */,
+				481A0CB42959ABB80020F195 /* Builder */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -561,6 +583,7 @@
 				E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */,
 				E0E1D39F203AE7400011E01A /* ImageDownloader.swift in Sources */,
 				F8114FBE22A3DBF400102830 /* SearchView.swift in Sources */,
+				48BAEB5C295F2FCC002B5666 /* SearchRouter.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
@@ -570,6 +593,7 @@
 				484C29342948F363005A8044 /* GetLableSize.swift in Sources */,
 				481A0CB329598DAC0020F195 /* SearchPresenter.swift in Sources */,
 				484C29322948CD88005A8044 /* AppDetailConstants.swift in Sources */,
+				48BAEB5E295F3202002B5666 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
