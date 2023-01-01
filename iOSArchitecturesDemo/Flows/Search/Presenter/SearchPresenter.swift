@@ -23,12 +23,19 @@ final class SearchPresenter {
     weak var viewInput: (UIViewController & SearchViewInput)?
     
     //MARK: - Private properties
-    private let searchService = ITunesSearchService()
     private var imageServise = ImageDownloader()
+    private let interactor: SearchInteractorInput
+    private let router: RearchRouterInput
+    
+    //MARK: - Constructor
+    init(interactor: SearchInteractorInput, router: RearchRouterInput) {
+        self.interactor = interactor
+        self.router = router
+    }
     
     //MARK: - Private functions
     private func requestApps(with query: String) {
-        self.searchService.getApps(forQuery: query) { [weak self] result in
+        self.interactor.requestApps(with: query) { [weak self] result in
             guard let self = self else { return }
             self.viewInput?.throbber(show: false)
             result
@@ -47,7 +54,7 @@ final class SearchPresenter {
     }
     
     private func requestSongs(with query: String) {
-        self.searchService.getSongs(forQuery: query) { [weak self] result in
+        self.interactor.requestSongs(with: query) { [weak self] result in
             guard let self = self else { return }
             self.viewInput?.throbber(show: false)
             result
@@ -66,15 +73,11 @@ final class SearchPresenter {
     }
     
     private func openAppDetails(with app: ITunesApp) {
-        let appDetaillViewController = AppDetailViewController(app: app)
-        self.viewInput?.navigationController?.pushViewController(appDetaillViewController,
-                                                                 animated: true)
+        router.openAppDetails(app: app)
     }
     
     private func openSongDetails(with song: ITunesSong) {
-        let songDetaillViewController = SongDetailViewController(song: song)
-        self.viewInput?.navigationController?.pushViewController(songDetaillViewController,
-                                                                 animated: true)
+        router.openSongDetails(song: song)
     }
 }
 
