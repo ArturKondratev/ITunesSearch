@@ -14,4 +14,4 @@
 
 :white_check_mark: Архитектура VIPER
   
-<img src="https://github.com/ArturKondratev/Lesson7/blob/main/iOSArchitecturesDemo/Screen/Screen1.png?raw=true" width="250">   <img src="https://github.com/ArturKondratev/Lesson7/blob/main/iOSArchitecturesDemo/Screen/Screen2.png?raw=true" width="250">   <img src="https://github.com/ArturKondratev/Lesson7/blob/main/iOSArchitecturesDemo/Screen/Screen3.png?raw=true" width="250">
+<img src="https://github.com/ArturKondratev/ITunesSearch/blob/main/iOSArchitecturesDemo/Screen/Screen1.png" width="250">   <img src="https://github.com/ArturKondratev/ITunesSearch/blob/main/iOSArchitecturesDemo/Screen/Screen2.png" width="250">   <img src="https://github.com/ArturKondratev/ITunesSearch/blob/main/iOSArchitecturesDemo/Screen/Screen3.png" width="250">
